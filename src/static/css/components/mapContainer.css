@@ -1,23 +1,20 @@
 
 /* Variables */
 :root {
-  --brown: #252529;
-  --text: #3e3f42;
-  --light: #9ea0a5;
-  --blue: #1665d8;
-  --blue-light: #4187ee;
-  --white: #ffffff;
-  --divider: #2e2e33;
-  --divider-light: #eaedf3;
   --default-padding: 8px;
+  --earth-surface: #7EB6D9;
+  --earth-borders: #C9EBF2;
+  --earth-water: #0E3D59; 
+  --trace: #3981BF;
 }
 
 .svg-container {
-  fill: silver
+  fill: var(--earth-surface);
+  stroke: var(--earth-surface);
 }
 
 .circleNow {
-  stroke:orange;
+  stroke:var(--trace);
 }
 
 

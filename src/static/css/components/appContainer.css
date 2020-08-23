@@ -1,18 +1,14 @@
 /* Variables */
 :root {
-  --brown: #252529;
-  --text: #3e3f42;
-  --light: #9ea0a5;
-  --blue: #1665d8;
-  --blue-light: #4187ee;
-  --white: #ffffff;
-  --divider: #2e2e33;
-  --divider-light: #eaedf3;
   --default-padding: 8px;
+  --earth-surface: #7EB6D9;
+  --earth-borders: #C9EBF2; 
+  --earth-water: #0E3D59;
+  --trace: #F9C75E;
 }
 
 .app-container {
-  background-color: white;
+  background-color: var(--earth-water);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;

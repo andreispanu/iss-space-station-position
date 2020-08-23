@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* <LoadingScreen /> */}
+      <LoadingScreen />
       <TopBox tick={tick} />
       <MapContainer tick={tick} />
     </div>

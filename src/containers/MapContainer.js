@@ -3,12 +3,9 @@ import { geoEqualEarth, geoPath } from "d3-geo"
 import { feature } from "topojson-client"
 // CSS
 import "../static/css/components/mapContainer.css";
-import * as d3 from "d3";
-
 
 const MapContainer = (props) => {
 
-  let width = window.innerWidth;
   let viewBox = `0 0 800 450`;
   const [geographies, setGeographies] = useState([])
   let [iss, setIss] = useState([])
@@ -38,7 +35,8 @@ const MapContainer = (props) => {
         let { latitude } = source
         let { longitude } = source
         setIss([...iss, { coordinates: [longitude, latitude], size: 12 }])
-        // setIss([{ coordinates: [longitude, latitude], size: 17 }])
+        // ===== will disable the trace
+        // setIss([{ coordinates: [longitude, latitude], size: 12 }])
       }
     }
     // call the function

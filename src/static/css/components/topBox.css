@@ -1,11 +1,14 @@
 /* Variables */
 :root {
   --default-padding: 8px;
+  --earth-surface: #7EB6D9;
+  --earth-borders: #C9EBF2; 
+  --earth-water: #0E3D59;
+  --trace: #F9C75E;
+  --text-color: #F9C75E
 }
-
 .box-container { 
-  background-color: rgba(0, 0, 0, 0.1);
-  color: var(--text);
+  background-color: rgba(14, 61, 89, 0.7);
   z-index: 5;
   width: 100%;
   display: grid;
@@ -23,6 +26,7 @@
 }
 
 .box-title {
+  color: var(--text-color);
   display: flex;
   align-items: center;
   font-weight: bold;
@@ -35,6 +39,7 @@
 .box-item {
   padding: var(--default-padding);
   font-size: 18px;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,6 +48,7 @@
 
 .box-item .label {
   font-weight: bold;
+  color: var(--text-color);
 }
 
 @media only screen and (min-width: 760px) {
