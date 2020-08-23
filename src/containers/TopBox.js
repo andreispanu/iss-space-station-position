@@ -27,8 +27,8 @@ const TopBox = (props) => {
         Live Feed
       </div>
       <div className="box-positions-container">
-        <div className="box-item"><span className="label">Lat: </span><span className="value">{positions[0]}</span></div>
-        <div className="box-item"><span className="label">Long: </span><span className="value">{positions[1]}</span></div>
+        <div className="box-item"><span className="label">Lat: </span><span className="value">{positions[1]}</span></div>
+        <div className="box-item"><span className="label">Long: </span><span className="value">{positions[0]}</span></div>
       </div>
 
     </div>

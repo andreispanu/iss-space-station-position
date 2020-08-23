@@ -39,6 +39,7 @@ function App() {
       <LoadingScreen />
       <TopBox tick={tick} />
       <MapContainer tick={tick} />
+      {error && <p>{error}</p>}
     </div>
   );
 }
