@@ -5,6 +5,9 @@ import MapContainer from "./containers/MapContainer";
 import TopBox from "./containers/TopBox";
 import LoadingScreen from './containers/LoadingScreen';
 
+// CSS
+import "./static/css/components/appContainer.css";
+
 function App() {
 
   const [error, setError] = useState('');
@@ -32,7 +35,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="app-container">
       {/* <LoadingScreen /> */}
       <TopBox tick={tick} />
       <MapContainer tick={tick} />

@@ -1,4 +1,3 @@
-
 /* Variables */
 :root {
   --brown: #252529;
@@ -12,12 +11,13 @@
   --default-padding: 8px;
 }
 
-.svg-container {
-  fill: silver
-}
-
-.circleNow {
-  stroke:orange;
+.app-container {
+  background-color: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
 }
 
 

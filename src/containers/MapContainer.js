@@ -37,8 +37,8 @@ const MapContainer = (props) => {
         let source = props.tick.data.iss_position
         let { latitude } = source
         let { longitude } = source
-        // setIss([...iss, { coordinates: [longitude, latitude], size: 20 }])
-        setIss([{ coordinates: [longitude, latitude], size: 20 }])
+        setIss([...iss, { coordinates: [longitude, latitude], size: 12 }])
+        // setIss([{ coordinates: [longitude, latitude], size: 17 }])
       }
     }
     // call the function
@@ -48,37 +48,40 @@ const MapContainer = (props) => {
   }, [props.tick])
 
   return (
-    <svg width={width} height={'100vh'} viewBox={viewBox} >
-      <g className="countries">
-        {
-          geographies.map((d, i) => (
-            <path
-              key={`path-${i}`}
-              d={geoPath().projection(projection)(d)}
-            />
-          ))
-        }
-      </g>
-      <g className="markers">
-        <defs>
-          <pattern id="img1" patternUnits="userSpaceOnUse" width="30.95" height="29.087">
-            <image href={issImage} x="0" y="0" width="30.95" height="29.087" />
-          </pattern>
-        </defs>
-        {
-          iss.map((locationData, i) =>
-            <circle
-              key={`marker-${i}`}
-              cx={projection(locationData.coordinates)[0]}
-              cy={projection(locationData.coordinates)[1]}
-              r={locationData.size}
-              className="circleNow"
-              fill="url(#img1)"
-            />
-          )
-        }
-      </g>
-    </svg>
+    <div className="svg-container">
+      <svg width='100%' height="100vh" viewBox={viewBox} >
+        <g className="countries">
+          {
+            geographies.map((d, i) => (
+              <path
+                key={`path-${i}`}
+                d={geoPath().projection(projection)(d)}
+              />
+            ))
+          }
+        </g>
+        <g className="markers">
+          <defs>
+            <pattern id="img1" patternUnits="objectBoundingBox" width="24" height="24">
+              <image href={issImage} x="0" y="0" width="24" height="24" />
+            </pattern>
+          </defs>
+          {
+            iss.map((locationData, i) =>
+              <circle
+                key={`marker-${i}`}
+                cx={projection(locationData.coordinates)[0]}
+                cy={projection(locationData.coordinates)[1]}
+                r={locationData.size}
+                className="circleNow"
+                fill="url(#img1)"
+              />
+            )
+          }
+        </g>
+      </svg>
+    </div>
+
   )
 }
 

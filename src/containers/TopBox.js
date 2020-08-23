@@ -21,13 +21,16 @@ const TopBox = (props) => {
 
   return (
     <div className="box-container">
+
+
       <div className="box-title">
-        <p>Live Feed</p>
+        Live Feed
       </div>
       <div className="box-positions-container">
-        <div className="box-item"><p>Lat: <span>{positions[0]}</span></p></div>
-        <div className="box-item"><p>Long:<span>{positions[1]}</span></p></div>
+        <div className="box-item"><span className="label">Lat: </span><span className="value">{positions[0]}</span></div>
+        <div className="box-item"><span className="label">Long: </span><span className="value">{positions[1]}</span></div>
       </div>
+
     </div>
   )
 }
